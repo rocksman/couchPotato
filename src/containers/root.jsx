@@ -4,9 +4,9 @@ import { BrowserRouter, Switch } from 'react-router-dom';
 
 import Layout from '../components/Layout';
 import Home from './home';
-// import Search from './search';
 import Login from './login';
 import Register from './register';
+import Recommended from './recommended';
 
 class Root extends Component {
     render() {
@@ -19,7 +19,7 @@ class Root extends Component {
                         <Route exact path='/auth' component={withRouter(Login)} />
                         <Route exact path='/auth/login' component={withRouter(Login)} />
                         <Route exact path='/auth/register' component={withRouter(Register)} />
-                        {/* <Route exact path='/search' component={withRouter(Search)} /> */}
+                        <Route exact path='/recommended' component={withRouter(Recommended)} />
                     </Switch>
                 </Layout>
             </BrowserRouter>

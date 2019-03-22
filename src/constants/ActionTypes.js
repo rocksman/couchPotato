@@ -4,4 +4,5 @@ export default keyMirror({
   GOT_USER : null,
   GOT_REGISTER: null,
   REMOVE_USER : null,
+  GOT_RECOMMEND : null
 });

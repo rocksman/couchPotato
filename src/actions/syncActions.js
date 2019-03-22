@@ -18,3 +18,8 @@ export const gotRegistered = () => ({
 export const removeAuth = () => ({
   type: ActionTypes.REMOVE_USER
 });
+
+export const gotRecommend = (data) => ({
+  type: ActionTypes.GOT_RECOMMEND,
+  payload: data
+});

@@ -4,5 +4,6 @@ export default {
         authenticated: false,
         registered: false
     },
+    recommendation: []
 };
   

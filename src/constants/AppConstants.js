@@ -4,5 +4,5 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = {
   nodeURL: "https://couchp-backed.herokuapp.com",
-  flaskURL: "http://139.59.86.66:4000",
+  flaskURL: "http://192.168.43.113:5000",
 };

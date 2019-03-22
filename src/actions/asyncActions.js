@@ -21,10 +21,20 @@ export const tryLogin = data => dispatch =>
         });
 
 export const tryRegister = data => dispatch =>
-    makeRequest("post", `${AppConstants.nodeURL}/api/user/register`, { name: data.name, email:data.email, password: data.password, password2: data.password2 })
+    makeRequest("post", `${AppConstants.nodeURL}/api/user/register`, { name: data.name, email: data.email, password: data.password, password2: data.password2 })
         .then(resp => {
             console.log(resp.data);
             dispatch(syncActions.gotRegistered())
+        })
+        .catch(err => {
+            console.log(err);
+        });
+
+export const getRecommend = data => dispatch =>
+    makeRequest("post", `${AppConstants.flaskURL}`, {genre: data})
+        .then(resp => {
+            console.log(resp.data);
+            dispatch(syncActions.gotRecommend(resp.data))
         })
         .catch(err => {
             console.log(err);
